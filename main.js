@@ -118,11 +118,15 @@ if (document.body.id === "quiz") {
     let nextBtn = document.getElementById("next");
     let backBtn = document.getElementById("back")
     let count = 1;
-    nextBtn.onclick = function () {
+    nextBtn.onclick = function (e) {
 
         document.getElementById(`question${count + 1}`).setAttribute("class", "active");
         document.getElementById(`question${count}`).setAttribute("class", " ");
         count++;
+        if (document.getElementById("active-answer").classList.contains(document.querySelector(".active").classList.item(1))) {
+            document.getElementById("active-answer").style.outline = "2px solid green";
+        }
+        e.preventDefault();
     };
 
     let countLess = document.getElementsByTagName("img").length - 1;
@@ -149,6 +153,28 @@ if (document.body.id === "quiz") {
             point[i].setAttribute("id", "active-span");
         }
 
+    }
+
+
+
+
+
+}
+
+if (document.body.id == "log-in") {
+    let inputClass = document.getElementById("class");
+    let inputName = document.getElementById("user");
+    let inputEmail = document.getElementById("password");
+    let btn = document.querySelector(".btn-login");
+    let input = document.forms[0];
+    input.onsubmit = function (e) {
+        const user = document.getElementById('user').value;
+        const password = document.getElementById('password').value;
+        if (!user || !password) {
+            alert('يرجى ملء جميع الحقول.');
+            e.preventDefault();
+        }
+        window.location.href = `index.html?class=${inputClass.value}&email=${inputEmail.value}&name=${inputName.value}`;
     }
 
 }

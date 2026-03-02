@@ -267,3 +267,51 @@ img-logo-right {
     transform: scale(1.1);
     transition: transform 0.3s;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-family: Arial;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--maincolor);
+    text-decoration: none;
+    font-size: 30px;
+}
+
+a:hover {
+    color: #1f496f;
+    text-decoration: underline;
+}
+
+.box-transfers {
+    display: flex;
+    /* يخليهم في خط واحد */
+    justify-content: center;
+    /* في النص */
+    gap: 5cm;
+    margin-bottom: 30px;
+    /* مسافة 5 سم بينهم */
+}
+
+.transfers-1 {
+    text-decoration: none;
+    color: var(--maincolor);
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.transfers-1:hover {
+    color: #ffcc00;
+    /* أصفر أفتح عند المرور */
+}

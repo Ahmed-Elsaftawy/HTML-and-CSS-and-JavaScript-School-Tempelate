@@ -9,11 +9,10 @@
     <title>login-تسجيل الدخول</title>
 </head>
 
-<body>
+<body id="log-in">
     <div class="container">
         <h1 class="loginN">تسجيل الدخول الي مدرسه <span class="highlight">الشهيد علي زكريا</span> جاب الله</h1>
-        <img src="images/Gharbia Directorate of Education emblem.png" alt="School Image" class="school-image">
-        <form class="from" action="/login" method="post">
+        <form class="from" action="index.html" method="GET">>
             <label for="class">الصف:</label>
             <input type="text" id="class" name="class" required><br><br>
 
@@ -27,16 +26,7 @@
         </form>
         <a href="registration.html">هل لا تملك حساباً؟ سجل الآن</a>
     </div>
-    <script>
-        document.querySelector('form').addEventListener('submit', function (e) {
-            const user = document.getElementById('user').value;
-            const password = document.getElementById('password').value;
-            if (!user || !password) {
-                alert('يرجى ملء جميع الحقول.');
-                e.preventDefault();
-            }
-        });
-    </script>
+    <script src="main.js    "></script>
 </body>
 
 </html>
