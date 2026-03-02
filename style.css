@@ -178,7 +178,6 @@ header .logo .icon-links:hover nav ul li {
 @media(max-width:686px) {
     header nav ul li {
         display: block;
-        margin-left: 20px;
     }
 
     header .logo .icon-links {
@@ -198,13 +197,8 @@ header .logo .icon-links:hover nav ul li {
     header .links {
         display: grid;
         grid-template-columns: repeat(4, minmax(30px, 1fr));
-        /* margin-left: 5px; */
     }
 
-    header .links li:last-child a {
-        position: relative;
-        right: -14px;
-    }
 
 
 }
